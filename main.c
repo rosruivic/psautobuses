@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: roruiz-v <roruiz-v@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: nursanch <nursanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 12:35:50 by roruiz-v          #+#    #+#             */
-/*   Updated: 2023/04/20 19:47:18 by roruiz-v         ###   ########.fr       */
+/*   Updated: 2023/04/20 19:59:44 by nursanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,3 +78,5 @@ int main(int argc, char **argv)
 	
 	return (free(stack_a), free(stack_b), 0);
 }
+
+//nuria
