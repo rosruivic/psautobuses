@@ -29,3 +29,6 @@ int	ft_checkdata(char **str, t_stack	*stack_a)
 
 	return (error);
 }
+
+// que sean digitos o +-NUM (solo un signo), si hay un signo tiene que haber un num
+//no se pueden repetir los num
