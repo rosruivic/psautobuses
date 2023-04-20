@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bookstack.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: roruiz-v <roruiz-v@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: nursanch <nursanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 13:57:45 by roruiz-v          #+#    #+#             */
-/*   Updated: 2023/04/20 14:27:05 by roruiz-v         ###   ########.fr       */
+/*   Updated: 2023/04/20 19:53:58 by nursanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
  * @param stack_a 
  * @param stack_b 
  * @param dimension Determina el tamaño de la reserva.
- * @return int 			Devuelve -1 en caso de error en la reserva.
+ * @return int 			Devuelve -1 en caso de error en la reserva
  */
 int	ft_bookstack(t_stack stack_a, t_stack stack_b, int dimension)
 {
