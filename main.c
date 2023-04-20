@@ -6,7 +6,7 @@
 /*   By: roruiz-v <roruiz-v@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 12:35:50 by roruiz-v          #+#    #+#             */
-/*   Updated: 2023/04/20 18:43:34 by roruiz-v         ###   ########.fr       */
+/*   Updated: 2023/04/20 19:47:18 by roruiz-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,6 @@ int main(int argc, char **argv)
 		****************  ALGORITMOS DE ORDENACIÓN  *****************
 	*/
 	// ft_ordering(stack_a, stack_b);
+	
 	return (free(stack_a), free(stack_b), 0);
 }
