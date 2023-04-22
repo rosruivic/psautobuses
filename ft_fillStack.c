@@ -15,7 +15,7 @@
 
 void ft_ordin (stack_a);
 
-void ft_fillStack(autobus, stack_a)
+void ft_fillStack(int *autobus, t_stack *stack_a)
 {
 	/*por cada valor de autobus
 		- valor (con atoi)
@@ -24,18 +24,19 @@ void ft_fillStack(autobus, stack_a)
 		- curr_elmts contar elementos autobus
 		- total_elmts igual que el de arriba
 	*/
-int i;
-int totalLength;
-i = 0;
+	int i;
+	int totalLength;
+	i = 0;
 
-totalLength = count(autobus); //cuantos elementos tiene autobús
-while(i < totalLength){
-	stack_a[i]->value = ft_atoi(autobus[i]);
-	stack_a[i]->position = i; //mirar  si se empieza en 0 o en 1
-	stack_a[i]->curr_elmts = totalLength;
-	stack_a[i]->total_elmts = totalLength;
-	i++;	
-}
+	totalLength = count(autobus); //cuantos elementos tiene autobús
+	while(i < totalLength){
+		
+		stack_a[i]->value = ft_atoi(autobus[i]);
+		stack_a[i]->position = i; //mirar  si se empieza en 0 o en 1
+		stack_a[i]->curr_elmts = totalLength;
+		stack_a[i]->total_elmts = totalLength;
+		i++;	
+	}
 	ft_ordin(stack_a);
 } 
 

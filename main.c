@@ -24,6 +24,8 @@ int main(int argc, char **argv)
 	t_stack *stack_b;
 	char **autobus;
 	int i;
+	int autobusLen;
+	int *autobusInt;
 
 	i = 0;
 
@@ -35,22 +37,15 @@ int main(int argc, char **argv)
 	if (argc == 2)
 		autobus = ft_split(argv[1]);
 	else
-	{
 		autobus = argv; //TODO poner un bucle que guarde los valores
-
-	} 
-
-	if (ft_checkdata(autobus) == -1)
+	autobusLen = count(autobus);
+	if (ft_isNumber(autobus, autobusLen) == -1)
 		return (free(autobus), write(1, "ERROR", 5), 0);
-
-	if (ft_bookstack(stack_a, stack_b, argc - 1) == -1)
-	{
+	if(ft_parseInt(autobus, &autobusInt, autobusLen) == -1)
 		return (write(1, "ERROR", 5), 0);
-	}
-
-	// ahora tenemos los stacks ya creados bien y con los datos bien
-	ft_fillStack(autobus, stack_a); // esta funcion rellena los datos del stack a con los ya parseados(tipo de dato cambiado) ints,
-	// llamamos a atoi
-
-	
+	if(ft_isUnique(autobusInt, autobusLen) == -1) //TODO comprobar
+		return (free(autobusInt), write(1, "ERROR", 5), 0);
+	if (ft_bookstack(stack_a, stack_b, argc - 1) == -1)
+		return (write(1, "ERROR", 5), 0);
+	ft_fillStack(autobusInt, stack_a); // esta funcion rellena los datos del stack a con los ya parseados(tipo de dato cambiado) ints,
 }
