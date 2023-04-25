@@ -7,18 +7,18 @@ char *ft_isNumber(char *num)
 
 	if (len == 0) // no sé si hace falta
 	{
-		//return -1;
-        return "longitud 0";
+		return -1;
+        //return "longitud 0";
 	}
 	if (len == 1)
 	{
-		//return ft_isDigit(num[0]);
-        if(ft_isDigit(num[0]) == -1)
+		return ft_isDigit(num[0]);
+        /*if(ft_isDigit(num[0]) == -1)
         {
             return "long 1 y no es";
         }else{
             return "long 1 y si es";
-        }
+        }*/
 	}
 	if (len >= 2)
 	{
@@ -29,30 +29,30 @@ char *ft_isNumber(char *num)
 			{
 				if(ft_isDigit(num[i]) == -1)
 				{
-					//return -1;
-                    return "is digit dice que no";
+					return -1;
+                    //return "is digit dice que no";
 				}
 				i++;
 			}
-			//return 0;
-            return "si es un numero";
+			return 0;
+            //return "si es un numero";
 		}else{
 			i = 0;
 			while(i < len)
 			{
 				if(ft_isDigit(num[i]) == -1)
 				{
-					//return -1;
-                    return "is digit dice que no";
+				    return -1;
+                    //return "is digit dice que no";
 				}
 				i++;
 			}
-			//return 0;
-            return "longitud mayir que 2 y si es ";
+			return 0;
+            //return "longitud mayir que 2 y si es ";
 		}
 	}
-    return "longitud negativa ";
-    //return -1; //la longitud del string es negativa, es imposible pero es para que la función siempre devuelva un int
+    //return "longitud negativa ";
+    return -1; //la longitud del string es negativa, es imposible pero es para que la función siempre devuelva un int
 }
 int ft_isDigit(char num) //hija de isNumber
 {

@@ -40,13 +40,32 @@ void ft_fillStack(int *autobus, t_stack *stack_a)
 	ft_ordin(stack_a);
 } 
 
-int count(autobus)
-{
-
-}
-
-
-void ft_ordin (stack_a)
+void ft_ordin (t_stack stack_a) //poner en radix
 {
 	//rellenar el campo index
+	int min;
+	int i;
+	int j;
+	int len = stack_a[0]->total_elmts;
+	t_stack temp;
+	i = 0;
+	while(i < len)
+	{
+		min = stack_a[i]->value; 
+		j = i+1;
+		while(j < len){
+			if(stack_a[j]->value < min)
+			{
+				min = stack_a[j]->value;
+				stack_a[j]->index = i;
+
+				temp = stack_a[i];
+				stack_a[i] = stack_a[j];
+				stack_a[j] = temp;
+			}
+			j++;
+		}
+		i++;
+	}
+	stack_a[len -1]->index = len -1;
 }

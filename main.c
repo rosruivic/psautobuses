@@ -27,7 +27,6 @@ int main(int argc, char **argv)
 	int autobusLen;
 	int *autobusInt;
 
-	i = 0;
 
 	stack_a = NULL;
 	stack_b = NULL;
@@ -37,7 +36,14 @@ int main(int argc, char **argv)
 	if (argc == 2)
 		autobus = ft_split(argv[1]);
 	else
-		autobus = argv; //TODO poner un bucle que guarde los valores
+	{
+		i = 0;
+		while(i < (argc-1))
+		{
+			autobus[i] = argv[i+1];
+			i++;
+		}
+	}
 	autobusLen = count(autobus);
 	if (ft_isNumber(autobus, autobusLen) == -1)
 		return (free(autobus), write(1, "ERROR", 5), 0);
